@@ -14,10 +14,10 @@
 
 const mongoose = require("mongoose");
 
-const MONGO_URI = "mongodb+srv://choukseyaryan49:dpCQuxobzYckW0Vv@cluster0.fo6nw.mongodb.net/testDB?retryWrites=true&w=majority";
+
 
 const connectDB=async ()=>
-  mongoose.connect(MONGO_URI, {
+  mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
